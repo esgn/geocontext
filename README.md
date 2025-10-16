@@ -1,4 +1,4 @@
-# geocontext
+# geocontext fork for testing
 
 Un serveur MCP expérimental fournissant du contexte spatial pour les LLM.
 
@@ -192,4 +192,5 @@ mcp add tool gpf_wmts_layers
 ## Licence
 
 [MIT](LICENSE)
+
 
