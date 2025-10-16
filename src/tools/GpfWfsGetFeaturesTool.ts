@@ -23,6 +23,9 @@ class GpfWfsGetFeaturesTool extends MCPTool<GpfWfsGetFeaturesInput> {
     },
     property_names: {
       type: z.array(z.string()).optional(),
+      // Ensure the generated tool parameters JSON-schema includes the items definition
+      // to avoid "array type must have items" validation errors.
+      items: { type: "string" },
       description: 'La liste des propriétés (ex : [code_insee,nom_officiel,geometrie]). NB : adapter geometrie avec geometryName au niveau du type WFS. '
     },
     sort_by: {
