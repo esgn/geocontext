@@ -22,7 +22,7 @@ class GpfWfsGetFeaturesTool extends MCPTool<GpfWfsGetFeaturesInput> {
       description: "Le nom du type (ex : BDTOPO_V3:batiment). Important : Utiliser gpf_wfs_search_types pour trouver les types disponibles."
     },
     property_names: {
-      type: z.array(z.string()).optional(),
+      type: z.array(z.union([z.string(), z.number()])).optional(),
       // Ensure the generated tool parameters JSON-schema includes the items definition
       // to avoid "array type must have items" validation errors.
       items: { type: "string" },
